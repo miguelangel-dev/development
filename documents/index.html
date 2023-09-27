@@ -6,7 +6,7 @@
          console.log(urlParams);
          const rawAnchor = urlParams.get('anchor');
          console.log(rawAnchor);
-         const rawFragment = rawAnchor.split('#')[1]; // this is the document id
+         const rawFragment = window.location.hash.substr(1); // this is the document id
          console.log(rawFragment);
          const url = "https://web.goodnotes.com/s/".concat(rawFragment);
          console.log(url);
