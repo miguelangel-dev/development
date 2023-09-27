@@ -1,9 +1,15 @@
-Hello GitHub Pages
 <html>
 <head>
 <script type="text/JavaScript">
  function Redirect() {
-    window.location.replace("https://web.goodnotes.com/s/MaknAG9ZBVIbRDd0n26jAY");
+    const params = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(params);
+    const rawAnchor = urlParams.get('anchor');
+    const rawFragment = rawAnchor.split('#')[1];
+    const anchor = Buffer.from(rawAnchor, 'base64').toString();
+    const pageId = anchor.replace('page-', '');
+    const documentId = Buffer.from(rawFragment, 'base64').toString();
+    window.location.replace("https://web.goodnotes.com/s/".concat(documentId));
  }
  Redirect();
 </script>
