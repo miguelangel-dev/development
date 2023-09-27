@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "5UAR78B6YU.com.goodnotesapp.x",
+        "paths": [ "link/*"],
+        "components": [
+          {
+            "/": "/link/*",
+            "comment": "Matches any URL whose path starts with /link/"
+          }
+        ]
+      }
+    ]
+  }
+}
