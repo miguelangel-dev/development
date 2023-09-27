@@ -3,9 +3,14 @@
    <script type="text/JavaScript">
       function redirect() {
          const urlParams = new URLSearchParams(window.location.search);
+         console.log(urlParams);
          const rawAnchor = urlParams.get('anchor');
+         console.log(rawAnchor);
          const rawFragment = rawAnchor.split('#')[1]; // this is the document id
-         window.location.replace("https://web.goodnotes.com/s/".concat(rawFragment));
+         console.log(rawFragment);
+         const url = "https://web.goodnotes.com/s/".concat(rawFragment);
+         console.log(url);
+         window.location.replace(url);
       }
       redirect();
    </script>
